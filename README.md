@@ -1,99 +1,160 @@
-# OmniWork — Interruptibility & Context Layer
+# OmniWork
 
-Know before you interrupt. An intelligent interruptibility and context-sharing layer for remote and hybrid teams, powered by Google Gemini 2.5.
+> **An interruption-awareness workspace for modern teams.**
 
----
+OmniWork helps teams communicate **when to interrupt, why to interrupt, and when to wait**.
 
-## 🚀 Quick Start (Running Locally from GitHub)
-
-### Prerequisites
-- Node.js 20+ or 22+
-- npm (bundled with Node.js)
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/omniwork.git
-cd omniwork
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Set up environment variables
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-Add your Gemini API Key in `.env`:
-```env
-GEMINI_API_KEY="your-gemini-api-key-here"
-```
-*(Get an API key from [Google AI Studio](https://aistudio.google.com/app/apikey))*
-
-### 4. Start the development server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Instead of relying on constant notifications and guessing whether a teammate is available, OmniWork gives every person a clear work context and helps route communication respectfully.
 
 ---
 
-## ☁️ Running in GitHub Codespaces
+## 🌐 Live Demo
 
-OmniWork is configured for 1-click execution in **GitHub Codespaces**:
-1. In your GitHub repository, click the green **<> Code** button.
-2. Select the **Codespaces** tab.
-3. Click **Create codespace on main**.
-4. Once the terminal opens, run:
-   ```bash
-   npm run dev
-   ```
-5. Port `3000` will be automatically forwarded and a preview tab will open.
+### GitHub Pages
+
+**https://joeljery.github.io/omniwork/**
+
+The GitHub Pages deployment provides a fully functional browser-based demo.
+
+The frontend automatically uses the local demo data layer when a production API is not configured or cannot be reached.
 
 ---
 
-## 📦 Production Build & Run
+# ✨ Features
 
-To build both the React frontend and the bundled Express backend:
+## 🧠 Work Context
 
-```bash
-# Compile client and backend bundle into dist/
-npm run build
+Each teammate can communicate their current working state:
 
-# Start the production server
-npm start
-```
-The production server will listen on `http://0.0.0.0:3000` (or the port specified in `process.env.PORT`).
+- **Focus**
+- **Available**
+- **Away**
 
----
+A work context can include:
 
-## 🐳 Running with Docker
+- Current project
+- Current task
+- Status message
+- What is worth interrupting for
+- Optional expiration time
 
-```bash
-# Build Docker image
-docker build -t omniwork .
-
-# Run Docker container
-docker run -p 3000:3000 -e GEMINI_API_KEY="your-key" omniwork
-```
+This lets teammates understand someone's availability before sending an interruption.
 
 ---
 
-## 🛠 Available Scripts
+## 👥 Team Awareness
 
-- `npm run dev` — Starts the Vite dev server with integrated Express backend on port 3000
-- `npm run build` — Compiles the Vite SPA and bundles `server.ts` into `dist/server.cjs`
-- `npm start` — Runs the standalone production Node server from `dist/server.cjs`
-- `npm run lint` — Runs TypeScript type-checking (`tsc --noEmit`)
-- `npm run clean` — Removes build artifacts
+OmniWork provides a team-wide view of:
+
+- Current teammate status
+- Active work context
+- Projects
+- Tasks
+- Availability
+- Interruptibility boundaries
+
+The goal is to make team communication more intentional without requiring people to constantly explain their availability.
 
 ---
 
-## 🏗 Tech Stack
+## 💬 Respectful Messaging
 
-- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Lucide Icons, Motion (Framer Motion)
-- **Backend API**: Node.js, Express, esbuild
-- **AI Engine**: Google Gemini API via `@google/genai` (Gemini 2.5 Flash)
-- **CI / DevOps**: GitHub Actions (`.github/workflows/ci.yml`), GitHub Codespaces DevContainer, Dockerfile
+Messages can be categorized by urgency:
+
+- Quick question
+- Important
+- Urgent
+
+Messages are queued and associated with the recipient's current context.
+
+---
+
+## 🚦 Interruption Evaluation
+
+OmniWork can evaluate whether an interruption is appropriate based on:
+
+- The recipient's status
+- Their current task
+- Their interruption preferences
+- The urgency of the request
+- Available team context
+
+---
+
+## 📝 Status Message Generation
+
+OmniWork can help create concise status messages from natural-language input.
+
+For example:
+
+> "I'm working on the checkout bug and don't want interruptions unless production is affected."
+
+can become a structured work context.
+
+---
+
+## 🤖 AI Assistance
+
+The application includes AI-powered functionality for:
+
+- Structuring work context
+- Generating status messages
+- Evaluating interruptions
+- Generating messages
+- Explaining work events
+- Creating catch-up summaries
+- Team recommendations
+- OmniWork questions
+
+The server uses Google's Gemini API when `GEMINI_API_KEY` is configured.
+
+If the backend or Gemini API is unavailable, the GitHub Pages demo uses local fallback behavior.
+
+---
+
+## 📋 Catch-Up
+
+OmniWork can summarize important recent team activity so teammates can catch up without reading every event individually.
+
+---
+
+## 🔌 Integrations
+
+The application includes an integration-awareness layer for services such as:
+
+- Slack
+- GitHub
+- Zoom
+- Project Workspace
+- Meeting Notes
+
+The current implementation represents integration state inside OmniWork. External service synchronization can be connected through the backend as the project evolves.
+
+---
+
+# 🏗️ Architecture
+
+OmniWork uses a hybrid architecture.
+
+```text
+                         ┌─────────────────────────┐
+                         │       GitHub Pages      │
+                         │                         │
+                         │   React + Vite frontend │
+                         └────────────┬────────────┘
+                                      │
+                         HTTPS API    │
+                                      ▼
+                         ┌─────────────────────────┐
+                         │     Express Backend     │
+                         │                         │
+                         │   REST API + AI logic  │
+                         └────────────┬────────────┘
+                                      │
+                         ┌────────────┴────────────┐
+                         │                         │
+                         ▼                         ▼
+                ┌─────────────────┐       ┌─────────────────┐
+                │ Supabase /      │       │ Gemini API      │
+                │ PostgreSQL      │       │                 │
+                └─────────────────┘       └─────────────────┘
