@@ -1,0 +1,359 @@
+{
+  "users": [
+    {
+      "id": "user-me",
+      "name": "You (Joel Jery)",
+      "email": "joel.jery@omniwork.internal",
+      "role": "Lead Full-Stack Engineer",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "API Design"
+      ],
+      "created_at": "2026-08-15T17:54:02.011Z"
+    },
+    {
+      "id": "user-rahul",
+      "name": "Rahul Sharma",
+      "email": "rahul.s@omniwork.internal",
+      "role": "Staff Backend Engineer",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "Node.js",
+        "PostgreSQL",
+        "Stripe",
+        "Redis",
+        "Webhooks",
+        "Distributed Systems"
+      ],
+      "created_at": "2026-07-16T17:54:02.012Z"
+    },
+    {
+      "id": "user-sarah",
+      "name": "Sarah Lin",
+      "email": "sarah.lin@omniwork.internal",
+      "role": "Senior Frontend Lead",
+      "avatar_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Design Systems",
+        "Product UX",
+        "Web Performance"
+      ],
+      "created_at": "2026-06-16T17:54:02.012Z"
+    },
+    {
+      "id": "user-alex-rivera",
+      "name": "Alex Rivera",
+      "email": "alex.r@omniwork.internal",
+      "role": "QA Automation Engineer",
+      "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "Cypress",
+        "Playwright",
+        "CI/CD",
+        "Regression Testing",
+        "Postman"
+      ],
+      "created_at": "2026-07-31T17:54:02.012Z"
+    },
+    {
+      "id": "user-priya",
+      "name": "Priya Patel",
+      "email": "priya.p@omniwork.internal",
+      "role": "Lead Product Designer",
+      "avatar_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "Figma",
+        "UI/UX",
+        "Design Systems",
+        "User Research",
+        "Prototyping"
+      ],
+      "created_at": "2026-07-01T17:54:02.012Z"
+    },
+    {
+      "id": "user-marcus",
+      "name": "Marcus Chen",
+      "email": "marcus.c@omniwork.internal",
+      "role": "DevOps & Infra Architect",
+      "avatar_url": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "skills": [
+        "Kubernetes",
+        "Docker",
+        "AWS",
+        "GCP",
+        "PostgreSQL",
+        "Terraform"
+      ],
+      "created_at": "2026-05-17T17:54:02.012Z"
+    }
+  ],
+  "workContexts": {
+    "user-me": {
+      "id": "ctx-me",
+      "user_id": "user-me",
+      "status": "Focus",
+      "project": "OmniWork Core",
+      "task": "Workspace context & interruptibility features",
+      "message": "Working on OmniWork Core — please avoid interruptions.",
+      "interrupt_for": "Critical blockers & production outages",
+      "expires_at": "1h",
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T19:14:42.320Z"
+    },
+    "user-rahul": {
+      "id": "ctx-rahul",
+      "user_id": "user-rahul",
+      "status": "Focus",
+      "project": "Checkout 2.0",
+      "task": "Webhook retry handling & payment idempotency",
+      "message": "Working on webhook retry handling — please avoid interruptions.",
+      "interrupt_for": "Production outages & critical blockers",
+      "expires_at": "3:30 PM",
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T17:54:02.012Z"
+    },
+    "user-sarah": {
+      "id": "ctx-sarah",
+      "user_id": "user-sarah",
+      "status": "Available",
+      "project": "Checkout 2.0",
+      "task": "Reviewing component library & design polish",
+      "message": "Free for a quick discussion or frontend code reviews.",
+      "interrupt_for": "Any frontend or design questions",
+      "expires_at": null,
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T17:54:02.012Z"
+    },
+    "user-alex-rivera": {
+      "id": "ctx-alex-rivera",
+      "user_id": "user-alex-rivera",
+      "status": "Focus",
+      "project": "Checkout 2.0",
+      "task": "Preparing release presentation & test report",
+      "message": "Preparing release presentation — heads down.",
+      "interrupt_for": "Critical issues",
+      "expires_at": "8:00 PM",
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T17:54:02.012Z"
+    },
+    "user-priya": {
+      "id": "ctx-priya",
+      "user_id": "user-priya",
+      "status": "Away",
+      "project": "Design Sprint",
+      "task": "Off-site client research workshop",
+      "message": "Back at 4:00 PM from client research sync.",
+      "interrupt_for": "Urgent design blockers",
+      "expires_at": "4:00 PM",
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T17:54:02.012Z"
+    },
+    "user-marcus": {
+      "id": "ctx-marcus",
+      "user_id": "user-marcus",
+      "status": "Available",
+      "project": "Infra Hardening",
+      "task": "Cluster scaling & monitoring rules",
+      "message": "Available for DevOps consultation or deploy approvals.",
+      "interrupt_for": "Open to team syncs",
+      "expires_at": null,
+      "created_at": "2026-09-14T17:54:02.012Z",
+      "updated_at": "2026-09-14T17:54:02.012Z"
+    }
+  },
+  "statusHistory": [
+    {
+      "id": "hist-1789413282320",
+      "user_id": "user-me",
+      "status": "Focus",
+      "message": "Working on OmniWork Core — please avoid interruptions.",
+      "created_at": "2026-09-14T19:14:42.320Z"
+    },
+    {
+      "id": "hist-1789413065869",
+      "user_id": "user-me",
+      "status": "Focus",
+      "message": "Working on OmniWork Core — please avoid interruptions.",
+      "created_at": "2026-09-14T19:11:05.869Z"
+    },
+    {
+      "id": "hist-1789413059107",
+      "user_id": "user-me",
+      "status": "Available",
+      "message": "Free for a quick discussion or questions.",
+      "created_at": "2026-09-14T19:10:59.107Z"
+    },
+    {
+      "id": "hist-1",
+      "user_id": "user-me",
+      "status": "Available",
+      "message": "Free for a quick discussion or questions.",
+      "created_at": "2026-09-14T15:54:02.012Z"
+    }
+  ],
+  "workEvents": [
+    {
+      "id": "evt-1",
+      "team_id": "team-omni",
+      "source": "Slack #payments",
+      "category": "BLOCKER",
+      "title": "Payment webhook failures reported in staging",
+      "detail": "Stripe retry alerts triggered due to unhandled duplicate events in staging environment.",
+      "project": "Checkout 2.0",
+      "action_required": false,
+      "time_display": "10:10 AM",
+      "created_at": "2026-09-14T14:54:02.012Z"
+    },
+    {
+      "id": "evt-2",
+      "team_id": "team-omni",
+      "source": "Engineering Sync",
+      "category": "FYI",
+      "title": "Regression testing recommended by QA",
+      "detail": "Alex flagged payment edge cases and requested full regression coverage before release.",
+      "project": "Checkout 2.0",
+      "action_required": false,
+      "time_display": "11:00 AM",
+      "created_at": "2026-09-14T15:44:02.012Z"
+    },
+    {
+      "id": "evt-3",
+      "team_id": "team-omni",
+      "source": "Project Update",
+      "category": "DECISION",
+      "title": "Checkout launch moved to Monday",
+      "detail": "Deployment rescheduled by 48h to complete retry validation and ensure zero checkout risk.",
+      "project": "Checkout 2.0",
+      "action_required": false,
+      "time_display": "11:15 AM",
+      "created_at": "2026-09-14T15:59:02.012Z"
+    },
+    {
+      "id": "evt-4",
+      "team_id": "team-omni",
+      "source": "GitHub PR #142",
+      "category": "ACTION",
+      "title": "Rahul requested review of PR #142",
+      "detail": "feat(payments): idempotency key caching and exponential backoff retry handler.",
+      "project": "Checkout 2.0",
+      "target_user": "user-me",
+      "action_required": true,
+      "time_display": "11:30 AM",
+      "created_at": "2026-09-14T16:14:02.012Z"
+    },
+    {
+      "id": "evt-5",
+      "team_id": "team-omni",
+      "source": "Linear",
+      "category": "ACTION",
+      "title": "Update payment fallback documentation",
+      "detail": "Document retry thresholds and incident playbook for customer operations team.",
+      "project": "Checkout 2.0",
+      "target_user": "user-me",
+      "action_required": true,
+      "time_display": "11:45 AM",
+      "created_at": "2026-09-14T16:29:02.012Z"
+    },
+    {
+      "id": "evt-6",
+      "team_id": "team-omni",
+      "source": "Figma #checkout",
+      "category": "FYI",
+      "title": "New empty states finalized for payment errors",
+      "detail": "Priya updated component specifications in the design system token file.",
+      "project": "Checkout 2.0",
+      "action_required": false,
+      "time_display": "12:05 PM",
+      "created_at": "2026-09-14T16:49:02.012Z"
+    }
+  ],
+  "integrations": {
+    "user-me": [
+      {
+        "id": "slack",
+        "name": "Slack",
+        "icon": "slack",
+        "connected": true,
+        "lastSyncedStatus": "Focus — Working on OmniWork Core",
+        "lastSyncedAt": "Just now"
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "icon": "github",
+        "connected": true,
+        "lastSyncedStatus": "Synced active PR status",
+        "lastSyncedAt": "5m ago"
+      },
+      {
+        "id": "zoom",
+        "name": "Zoom",
+        "icon": "video",
+        "connected": true,
+        "lastSyncedStatus": "Calendar presence auto-synced",
+        "lastSyncedAt": "12m ago"
+      },
+      {
+        "id": "workspace",
+        "name": "Project Workspace",
+        "icon": "folder",
+        "connected": true,
+        "lastSyncedStatus": "Context: Checkout 2.0",
+        "lastSyncedAt": "3m ago"
+      },
+      {
+        "id": "notes",
+        "name": "Meeting Notes",
+        "icon": "file-text",
+        "connected": true,
+        "lastSyncedStatus": "Synced 3 action items",
+        "lastSyncedAt": "25m ago"
+      }
+    ]
+  },
+  "queuedMessages": [
+    {
+      "id": "msg-1",
+      "sender_id": "user-sarah",
+      "sender_name": "Sarah Lin",
+      "sender_avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "recipient_id": "user-me",
+      "recipient_name": "You",
+      "urgency": "Quick question",
+      "body": "Whenever you finish your focus session, could you check the button padding in the checkout PR?",
+      "created_at": "2026-09-14T17:14:02.012Z",
+      "read": true
+    },
+    {
+      "id": "msg-2",
+      "sender_id": "user-marcus",
+      "sender_name": "Marcus Chen",
+      "sender_avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "recipient_id": "user-me",
+      "recipient_name": "You",
+      "urgency": "Important",
+      "body": "Staging PostgreSQL cluster will be restarted at 6 PM for maintenance (no downtime expected).",
+      "created_at": "2026-09-14T17:29:02.012Z",
+      "read": true
+    },
+    {
+      "id": "msg-3",
+      "sender_id": "user-priya",
+      "sender_name": "Priya Patel",
+      "sender_avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "recipient_id": "user-me",
+      "recipient_name": "You",
+      "urgency": "Quick question",
+      "body": "Shared the mobile checkout flow export in Figma whenever you take a break.",
+      "created_at": "2026-09-14T17:44:02.012Z",
+      "read": true
+    }
+  ]
+}

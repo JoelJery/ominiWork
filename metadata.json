@@ -1,0 +1,6 @@
+{
+  "name": "OmniWork",
+  "description": "Know before you interrupt. An interruptibility and context layer for remote and hybrid teams.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

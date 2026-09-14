@@ -1,0 +1,78 @@
+import { CatchUpBrief } from '../types/index.ts';
+
+export const FALLBACK_CATCH_UP_BRIEF: CatchUpBrief = {
+  readTimeSeconds: 45,
+  headline: 'Caught up in 45 seconds.',
+  summary:
+    'Payment webhook staging blocker resolved with retry logic. Checkout 2.0 deployment moved to Monday for full regression testing. Review PR #142 and update documentation.',
+  blockers: [
+    {
+      id: 'evt-1',
+      team_id: 'team-omni',
+      source: 'Slack #payments',
+      category: 'BLOCKER',
+      title: 'Payment webhook failures reported in staging',
+      detail: 'Stripe retry alerts triggered due to unhandled duplicate events in staging environment.',
+      project: 'Checkout 2.0',
+      action_required: false,
+      time_display: '10:10 AM',
+      created_at: new Date(Date.now() - 180 * 60000).toISOString(),
+    },
+  ],
+  decisions: [
+    {
+      id: 'evt-3',
+      team_id: 'team-omni',
+      source: 'Project Update',
+      category: 'DECISION',
+      title: 'Checkout launch moved to Monday',
+      detail: 'Deployment rescheduled by 48h to complete retry validation and ensure zero checkout risk.',
+      project: 'Checkout 2.0',
+      action_required: false,
+      time_display: '11:15 AM',
+      created_at: new Date(Date.now() - 115 * 60000).toISOString(),
+    },
+  ],
+  actions: [
+    {
+      id: 'evt-4',
+      team_id: 'team-omni',
+      source: 'GitHub PR #142',
+      category: 'ACTION',
+      title: 'Rahul requested review of PR #142',
+      detail: 'feat(payments): idempotency key caching and exponential backoff retry handler.',
+      project: 'Checkout 2.0',
+      target_user: 'user-me',
+      action_required: true,
+      time_display: '11:30 AM',
+      created_at: new Date(Date.now() - 100 * 60000).toISOString(),
+    },
+    {
+      id: 'evt-5',
+      team_id: 'team-omni',
+      source: 'Linear',
+      category: 'ACTION',
+      title: 'Update payment fallback documentation',
+      detail: 'Document retry thresholds and incident playbook for customer operations team.',
+      project: 'Checkout 2.0',
+      target_user: 'user-me',
+      action_required: true,
+      time_display: '11:45 AM',
+      created_at: new Date(Date.now() - 85 * 60000).toISOString(),
+    },
+  ],
+  fyis: [
+    {
+      id: 'evt-2',
+      team_id: 'team-omni',
+      source: 'Engineering Sync',
+      category: 'FYI',
+      title: 'Regression testing recommended by QA',
+      detail: 'Alex flagged payment edge cases and requested full regression coverage before release.',
+      project: 'Checkout 2.0',
+      action_required: false,
+      time_display: '11:00 AM',
+      created_at: new Date(Date.now() - 130 * 60000).toISOString(),
+    },
+  ],
+};
